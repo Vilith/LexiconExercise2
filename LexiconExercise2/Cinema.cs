@@ -13,19 +13,19 @@ namespace LexiconExercise2
     {
         internal static void Start()
         {
-            //Age, Price & Costs tend to be positive figures so uint felt like the right thing to use.
+            //Age, Price & Costs tend to be positive figures so i've chosen to use uint
             uint age;
             uint price = 0;
             uint totalCost = 0;
 
-            //Getting the amount of visitors with help from a method in Utils.
+            //Getting the amount of visitors with help from a method in Utils
             uint cinemaVisitors = Utils.GetValidUint("How many will you be? ");
 
             //Counter to keep track on how many visitors
             for (uint i = 1; i <= cinemaVisitors; i++)
             {
 
-                //Loops through until correct input is made.
+                //Loops through until correct input is made
                 while (true)
                 {
                     Console.WriteLine($"Enter age for person {i}: ");
@@ -40,7 +40,7 @@ namespace LexiconExercise2
                     }
                 }
 
-                //Setting price based on age.
+                //Setting price based on age
                 if (age < 5 || age > 100)
                 {
                     price = 0;
@@ -61,11 +61,11 @@ namespace LexiconExercise2
                 totalCost += price;
             }
 
-            //Writes the total amount of visitors and the total cost.
+            //Writes the total amount of visitors and the total cost
             Console.WriteLine($"{Environment.NewLine}Total amount of visitors: {cinemaVisitors}");
             Console.WriteLine($"{Environment.NewLine}Total cost: {totalCost}");
 
-            //Waiting for user input before returning to menu.
+            //Waiting for user input before returning to menu
             Utils.AwaitUserInput();
         }
     }

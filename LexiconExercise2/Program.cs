@@ -6,7 +6,7 @@ namespace LexiconExercise2
     {
         static void Main(string[] args)
         {
-            //Starting the program by Constructing a menu.
+            //Starting the program by Constructing a menu
             Menu menu = new Menu();
             
         }

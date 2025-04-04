@@ -6,6 +6,7 @@ namespace LexiconExercise2
     {
         internal static void Start()
         {
+            //Placeholder until i've gotten to this point
             Utils.AwaitUserInput();
         }
     }

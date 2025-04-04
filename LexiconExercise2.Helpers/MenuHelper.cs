@@ -8,13 +8,13 @@ namespace LexiconExercise2.Helpers
 {
     public static class MenuHelper
     {
-
+        //Constants for the menu
         public const string CINEMA = "1";
         public const string REPEAT = "2";
         public const string THIRD = "3";        
         public const string QUIT = "0";
 
-
+        //Method to call the menu
         public static void ShowMainMenu()
         {
             Console.WriteLine($"{Environment.NewLine}|    Main Menu   |" +
@@ -25,6 +25,7 @@ namespace LexiconExercise2.Helpers
 
         }
 
+        //Method to call for invalid input text
         public static void InvalidText()
         {
             Console.WriteLine($"{Environment.NewLine}Invalid input!");
