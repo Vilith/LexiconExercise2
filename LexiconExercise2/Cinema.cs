@@ -13,13 +13,23 @@ namespace LexiconExercise2
     {
         internal static void Start()
         {
-            //Age, Price & Costs tend to be positive figures so i've chosen to use uint
+            //Age, Price & Costs tend to be positive figures so i've chosen to use uint            
             uint age;
             uint price = 0;
             uint totalCost = 0;
+            uint maxCinemaVisitors = 10;
 
             //Getting the amount of visitors with help from a method in Utils
-            uint cinemaVisitors = Utils.GetValidUint("How many will you be? ");
+            uint cinemaVisitors = Utils.GetValidUint("How many tickets do you want to buy? ");
+
+
+            while (cinemaVisitors > maxCinemaVisitors)
+            {
+                Console.WriteLine($"For reasons unknown you may only buy a total of {maxCinemaVisitors} tickets." +
+                    $"{Environment.NewLine}Please enter an amount smaller than {maxCinemaVisitors}: ");
+                cinemaVisitors = Utils.GetValidUint("How many tickets do you want to buy? ");
+            }
+
 
             //Counter to keep track on how many visitors
             for (uint i = 1; i <= cinemaVisitors; i++)
@@ -43,19 +53,19 @@ namespace LexiconExercise2
                 //Setting price based on age
                 if (age < 5 || age > 100)
                 {
-                    price = 0;
+                    price = 0; //Under 0-4 year olds & 101 years and older watch movies for free
                 }
                 else if (age >= 5 && age < 20)
                 {
-                    price = 80;
+                    price = 80; //Youths aged between 5 and 19 pays 80 SEK
                 }
                 else if (age > 64 && age <= 100)
                 {
-                    price = 90;
+                    price = 90; //Seniors aged 65 to 100 pays 90 SEK
                 }
                 else
                 {
-                    price = 120;
+                    price = 120; //People aged 20 - 64 pays 120 SEK
                 }
 
                 totalCost += price;

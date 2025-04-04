@@ -11,7 +11,7 @@
 
             while (!uint.TryParse(Console.ReadLine(), out result) || result == 0)
             {
-                Console.WriteLine("Invalid input!");
+                Console.WriteLine("Invalid input. Try again.");
             }
             return result;
         }

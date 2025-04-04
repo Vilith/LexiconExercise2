@@ -11,11 +11,13 @@ namespace LexiconExercise2
             string textInput = Console.ReadLine();
 
             Console.WriteLine($"{Environment.NewLine}You seem to be very fond of: ");
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
-                Console.Write(textInput);
+                Console.Write($"{i}.{textInput} ");
             }
 
+            //Waiting for user input before returning to menu
+            Utils.AwaitUserInput();
         }
     }
 }
