@@ -71,18 +71,20 @@ namespace LexiconExercise2
                         {
                             price = 90;
                         }
-                    else
+                        else
                         {
                             price = 120;
                         }
-                    }
+                    }                    
                 }
+                totalCost += price;
                 */
 
+                
                 //Setting price based on age
                 if (age < 5 || age > 100)
                 {
-                    price = 0; //Under 0-4 year olds & 101 years and older watch movies for free
+                    price = 0; //Under 4 year olds & 101 years and older watch movies for free
                 }
                 else if (age >= 5 && age < 20)
                 {
@@ -100,12 +102,13 @@ namespace LexiconExercise2
                 totalCost += price;
             }
 
-            //Writes the total amount of visitors and the total cost
-            Console.WriteLine($"{Environment.NewLine}Total amount of visitors: {cinemaVisitors}");
-            Console.WriteLine($"{Environment.NewLine}Total cost: {totalCost}");
+                //Writes the total amount of visitors and the total cost
+                Console.WriteLine($"{Environment.NewLine}Total amount of visitors: {cinemaVisitors}");
+                Console.WriteLine($"{Environment.NewLine}Total cost: {totalCost}");
 
-            //Waiting for user input before returning to menu
-            Utils.AwaitUserInput();
+                //Waiting for user input before returning to menu
+                Utils.AwaitUserInput();
+            }
         }
     }
-}
+
