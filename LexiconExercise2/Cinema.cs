@@ -50,6 +50,35 @@ namespace LexiconExercise2
                     }
                 }
 
+                /*
+                //Nested if-statement
+                if (age < 5 || age > 100)
+                {
+                    price = 0;
+                }
+                else
+                {
+                    if (age < 20)
+                    {
+                        if (age >= 5)
+                        {
+                            price = 80;
+                        }
+                    }
+                    else
+                    {
+                        if (age > 64)
+                        {
+                            price = 90;
+                        }
+                    else
+                        {
+                            price = 120;
+                        }
+                    }
+                }
+                */
+
                 //Setting price based on age
                 if (age < 5 || age > 100)
                 {
